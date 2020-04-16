@@ -40,5 +40,7 @@ module NardMaps
 
     config.rack_dev_mark.enable = !Rails.env.production? || ENV['RACK_DEV_MARK_ENV'].present?
     config.rack_dev_mark.theme = [:title, Rack::DevMark::Theme::GithubForkRibbon.new(position: 'right')]
+
+    config.active_storage.replace_on_assign_to_many = false
   end
 end
