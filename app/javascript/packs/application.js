@@ -17,3 +17,6 @@ require("channels");
 
 require("trix");
 require("@rails/actiontext");
+
+import "bootstrap";
+import "../src/application.scss";
