@@ -1,0 +1,9 @@
+defaults: &defaults
+  site_title: Nard::Maps
+  admin_title: 管理ページ
+development:
+  <<: *defaults
+test:
+  <<: *defaults
+production:
+  <<: *defaults
