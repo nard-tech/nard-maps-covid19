@@ -37,5 +37,8 @@ module NardMaps
 
     config.i18n.default_locale = :ja
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+
+    config.rack_dev_mark.enable = !Rails.env.production? || ENV['RACK_DEV_MARK_ENV'].present?
+    config.rack_dev_mark.theme = [:title, Rack::DevMark::Theme::GithubForkRibbon.new(position: 'right')]
   end
 end
