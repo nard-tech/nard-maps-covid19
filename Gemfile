@@ -23,12 +23,25 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  gem 'activerecord-import'
+  gem 'awesome_print'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'gimei'
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'pry-stack_explorer'
+  gem 'rspec-rails'
+  gem 'seedbank', github: 'james2m/seedbank', branch: 'version-1.0.0'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -40,7 +53,28 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'annotate', github: 'ctran/annotate_models', branch: 'develop'
+  gem 'letter_opener_web', '~> 1.0'
+  gem 'rails-erd'
+  gem 'rubocop', require: false
+end
+
+group :production do
+  gem 'aws-sdk-s3', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'cancancan'
+gem 'coffee-rails', '~> 5.0'
+gem 'devise'
+gem 'draper'
+gem 'font-awesome-sass', '~> 5.11.2'
+gem 'hamlit-rails'
+gem 'meta-tags'
+gem 'rack-dev-mark'
+gem 'rails-i18n'
+gem 'rails_admin', '~> 2.0', github: 'nard-tech/rails_admin', branch: 'develop'
+gem 'settingslogic'
